@@ -14,41 +14,42 @@
     <body>
           <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Viraat Krishna Adusumilli</a>
+              <a class="navbar-brand" href="index.html">Viraat Krishna Adusumilli</a>
 
-        <!-- Hamburger button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+          <!-- Hamburger button -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                      aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
 
-        <!-- Collapsible links -->
-            <div class="collapse navbar-collapse" id="navbarContent">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="resume.html">Resume</a>
-                </li>
-                <li style = "text-decoration:underline" class="nav-item">
-                  <a class="nav-link active" href="projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-              </ul>
+          <!-- Collapsible links -->
+              <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item" style = "text-decoration:underline">
+                    <a class="nav-link active" href="resume.html">Resume</a>
+                  </li>
+                  <li  class="nav-item">
+                    <a class="nav-link" href="projects.html">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-      </div>
-    </nav>
+          </nav>
 
       <div class = "container-fluid mt5">
         <div class = "row">
-          <div class = "col-md-6">
+          <div class = "col-md-6" style = "text-align: center">
             <ul>
-              <div class = "box"><li id = "Skill1"><img class = "img-thumbnail" src = "images/img_1.jpg"/>Skill1</li></div>
-              <div class = "box"><li id = "Skill2"><img class = "img-thumbnail" src = "images/img_2.jpg"/>Skill2</li></div>
-              <div class = "box"><li id = "Skill3"><img class = "img-thumbnail" src = "images/img_3.jpg"/>Skill3</li></div>
+              <img class = "img-thumbnail  mb-3" id ="mainSkillImage" src = "images/img_1.jpg"/ alt = "Skill1">
+              <div class = "box"><li id = "Skill1"><img class = "img-thumbnail  resume_images" src = "images/img_1.jpg"/>Skill1</li></div>
+              <div class = "box"><li id = "Skill2"><img class = "img-thumbnail resume_images" src = "images/img_2.jpg"/>Skill2</li></div>
+              <div class = "box"><li id = "Skill3"><img class = "img-thumbnail resume_images" src = "images/img_3.jpg"/>Skill3</li></div>
             </ul>
           </div>
 
@@ -63,14 +64,24 @@
       $('#Skill1').click(function(){
         $('#content').html("This is the info about skill 1.");
         $('#Skill1').addClass('text-decoration-underline');
+        $('#mainSkillImage').attr('src', 'images/img_1.jpg');
+        $('#Skill2').removeClass('text-decoration-underline');
+        $('#Skill3').removeClass('text-decoration-underline');
       });
       $('#Skill2').click(function(){
         $('#content').html("This is the info about skill 1.");
         $('#Skill2').addClass('text-decoration-underline');
+        $('#mainSkillImage').attr('src', 'images/img_2.jpg');
+        $('#Skill1').removeClass('text-decoration-underline');
+        $('#Skill3').removeClass('text-decoration-underline');
       });
       $('#Skill3').click(function(){
         $('#content').html("This is the info about skill 1.");
         $('#Skill3').addClass('text-decoration-underline');
+        $('#mainSkillImage').attr('src', 'images/img_3.jpg');
+        $('#Skill1').removeClass('text-decoration-underline');
+        $('#Skill2').removeClass('text-decoration-underline');
       });
+      
     </script>
 </html>

@@ -1,3 +1,24 @@
+/* Make body take full height and use flexbox */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Main content grows to fill space */
+.container-fluid#projects {
+  flex: 1;
+}
+
+
+
 .box {
   padding: 10px;
   border: 2px solid #14e0e0;   /* Light gray border */
@@ -5,10 +26,35 @@
   background-color: #3a0963; /* Light background */
   max-width: 100%;          /* Limit width of the box */
   margin: auto;
-  text-align: center;              /* Center the box */
+  text-align: left;
+  vertical-align: top;              /* Center the box */
 }
 
 ul{
   list-style-type: none;
   padding-left: 0;
+}
+
+.resume_images{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #14e0e0; /* Light gray border */
+}
+
+#mainSkillImage {
+      width: 600px;
+      height: 400px;
+      object-fit: cover;
+      border: 2px solid #14e0e0; /* Light gray border */
+    }
+
+.proj{
+  border: 2px solid #14e0e0; /* Light gray border */
+  border-radius: 10px;       /* Rounded corners */
+}
+
+#Home_page_picture{
+  border: 2px solid black;
+
 }
